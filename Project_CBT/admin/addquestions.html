@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css" >
+    <h1>ADDING A NEW TEST!</h1>
+    <hr>
+</head>
+<body>
+    <a class="home-button" href="../home/home.html">HOME</a>
+<div id="form-addquestions">
+    <form id="form1" action="abc.jsp">
+        <input type="hidden" name="formId" value="form1">
+        <p >Tag Name :</p>
+        <input type="text" id="tname" placeholder="Tag Name" name="tag">
+        <p>No. of questions :</p>
+        <input type="text" id="questions" placeholder="No. of questions" name="questions"><br><br> 
+    </form >
+    <br>
+    <button onclick="createInputs()" id="button-addquestions">Enter</button>
+</div>
+    <form id="form2" action="abc.jsp">
+        <input type="hidden" name="formId" value="form2">
+    <div id="dynamic_allign" ></div>
+</form>
+    
+ <script class="srcipt-admin">
+  function createInputs(){
+    var no_questions =parseInt(document.getElementById('questions').value);
+    var tag =document.getElementById('tname').value;
+
+    var dynamic_allign =document.getElementById('dynamic_allign');
+    dynamic_allign.innerHTML='';
+    
+    for(var i=1; i<= no_questions; i++){
+        //create labes for questions
+        var label = document.createElement('label');
+        label.for = 'questions ' + i;
+        label.innerHTML = 'Enter question '+i+':';
+        dynamic_allign.appendChild(label);
+       
+
+        //creating question:
+        var input = document.createElement('input');
+        input.type ='var';
+        input.id = 'input'+i;
+        input.name = 'input'+i;
+        input.placeholder = 'Enter question here...';
+        input.required = true;
+        dynamic_allign.appendChild(input);
+        //<br></br>
+       
+        //opp heading
+        //op1:
+        var label1 = document.createElement('label1');
+        label1.for = 'questions' + i;
+        label1.innerHTML = 'Option 1:';
+        dynamic_allign.appendChild(label1);
+        
+        var input = document.createElement('input');
+        input.type = 'var';
+        input.id = 'opp1'+i;
+        input.name = 'opp1'+i;
+        input.placeholder = 'Enter question here...';
+        input.required = true;
+        dynamic_allign.appendChild(input);
+        //opp2
+        var label2 = document.createElement('label2');
+        label2.for = 'questions' + i;
+        label2.innerHTML = 'Option 2:';
+        dynamic_allign.appendChild(label2);
+        
+        var opp2 = document.createElement('input');
+       opp2.type = 'var';
+       opp2.id = 'opp2'+i;
+       opp2.name = 'opp2'+i;
+       opp2.placeholder = 'Type Option here...';
+       opp2.required = true;
+        dynamic_allign.appendChild(opp2);
+        //opp3
+        var label3 = document.createElement('label3');
+        label3.for = 'questions' + i;
+        label3.innerHTML = 'Option 3:';
+        dynamic_allign.appendChild(label3);
+        
+        var opp3 = document.createElement('input');
+        opp3.type = 'var';
+        opp3.id = 'opp3'+i;
+        opp3.name = 'opp3'+i;
+        opp3.placeholder = 'Type Option here...';
+        opp3.required = true;
+        dynamic_allign.appendChild(opp3);
+        //opp4
+        var label4 = document.createElement('label4');
+        label4.for = 'questions' + i;
+        label4.innerHTML = 'Option 4:';
+        dynamic_allign.appendChild(label4);
+        
+        var opp4 = document.createElement('input');
+        opp4.type = 'var';
+        opp4.id = 'opp4'+i;
+        opp4.name = 'opp4'+i;
+        opp4.placeholder = 'Type Option here...';
+        opp4.required = true;
+        dynamic_allign.appendChild(opp4);
+
+         //curroption
+    var curr1 = document.createElement('curr1');
+        curr1.for = 'questions' + i;
+        curr1.innerHTML = "Click on Correct:  \n   Option1 :";
+        dynamic_allign.appendChild(curr1);
+
+        var curr1 = document.createElement('input');
+        curr1.type = 'radio';
+        curr1.id = 'curr1'+i;
+        curr1.name = 'curr'+i;
+        curr1.value = 1;
+        //curr1.required = true;
+        dynamic_allign.appendChild(curr1);
+
+         //curroption 2
+    var curr2 = document.createElement('curr2');
+        curr2.for = 'questions' + i;
+        curr2.innerHTML = 'Option 2 :';
+        dynamic_allign.appendChild(curr2);
+
+        var curr2 = document.createElement('input');
+        curr2.type = 'radio';
+        curr2.id = 'curr2'+i;
+        curr2.name = 'curr'+i;
+        curr2.value = 2;
+        //curr2.required = true;
+        dynamic_allign.appendChild(curr2);
+
+         //curroption 3
+    var curr3 = document.createElement('curr3');
+        curr3.for = 'questions' + i;
+        curr3.innerHTML = ' Option 3 :';
+        dynamic_allign.appendChild(curr3);
+
+        var curr3 = document.createElement('input');
+        curr3.type = 'radio';
+        curr3.id = 'curr3'+i;
+        curr3.name = 'curr'+i;
+        curr3.value =3;
+       // curr3.required = true;
+        dynamic_allign.appendChild(curr3);
+
+         //curroption4
+    var curr4 = document.createElement('curr4');
+        curr4.for = 'questions' + i;
+        curr4.innerHTML = 'Option 4 :';
+        dynamic_allign.appendChild(curr4);
+
+        var curr4 = document.createElement('input');
+        curr4.type = 'radio';
+        curr4.id = 'curr4'+i;
+        curr4.name = 'curr'+i;
+        curr4.value = 4;
+       // curr4.required = true;
+        dynamic_allign.appendChild(curr4);
+    }
+        //hidden:
+        var tag_h =document.createElement('input');
+        tag_h.setAttribute('type','hidden');
+        tag_h.setAttribute('name','tag');
+        tag_h.setAttribute('value',tag);
+        tag_h.id = 'hidden1';
+
+        
+        dynamic_allign.appendChild(tag_h);
+
+
+        var cnt_h =document.createElement('input');
+        cnt_h.setAttribute('type','hidden');
+        cnt_h.setAttribute('name','cnt');
+        cnt_h.setAttribute('value',no_questions);
+        cnt_h.id = 'hidden2';
+        
+        dynamic_allign.appendChild(cnt_h);
+
+
+        
+        //submit button
+        var curr10 = document.createElement('input');
+        curr10.type = "submit";
+        curr10.id = 'curr10';
+        curr10.name = 'curr10';
+        curr10.required = true;
+        dynamic_allign.appendChild(curr10);
+
+        
+  }
+ </script>
+</body>
+</html>

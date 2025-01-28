@@ -1,0 +1,223 @@
+body{
+    margin: 0%;
+}
+a{
+    text-decoration: none;
+}
+.logo{
+    width: 15%;
+    height: 100px;
+}
+.logo2{
+    width:85%;
+    height: 100px;
+}
+.header{
+    display: flex;   
+}
+
+.home1{
+  background-image:url("home/pexels-catiamatos-1072179.jpg");
+  
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    height: 100vh; /* Set body height to viewport height */
+    background-size: cover; /* Ensure the image covers the entire element */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+
+.home {
+    padding: 50px;
+    display:flex ; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // margin-top: 5px;
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(225, 94, 138);
+    margin: 0px;
+    padding: 10px;
+    backdrop-filter: blur(2px);
+}
+
+
+/* Basic button styling */
+.home-button {
+    background-color: #f179dd; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 15px 32px; /* Padding for the button */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Inline-block element */
+    font-size: 16px; /* Font size */
+    margin: 2px 2px; /* Margin around the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+/* Hover effect */
+.home-button:hover {
+    background-color: #ec1097; /* Darker green background */
+    color: #ffffff; /* Light grey text */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+hr{
+    margin: 0%;
+}
+.user-login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    margin-left:35%;
+    margin-right:35%;
+    border-radius: 20px;
+    p{
+        color: rgb(231, 120, 168);
+        font-size: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+}
+.user-body{
+    background-image: url(home/pexels-bri-schneiter-28802-346529.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center;
+    background-size:cover  ;
+   
+}
+.dashboard{
+    background-image: url("admin/pexels-creative-vix-9754.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    //height: 100vh;
+}
+.tables{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    border-collapse: collapse;
+}
+   
+td ,th{
+    color: rgb(251, 255, 1);
+    font-size: 20px;
+    padding: 20px 40px;
+    border: solid rgb(255, 130, 228);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    backdrop-filter: blur(5px);
+
+}
+.addquestions{
+    margin-left: 40%;
+    background-color: #e48dd2;
+    border-radius: 15px;
+    padding: 20px 40px;
+    transition:background-color  0.3s,color 0.3s,box-shadow 0.3s;
+}
+.addquestions:hover{
+    background-color: #ec1097;
+    box-shadow: 0 5px 10px black;
+}
+
+
+#form-addquestions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+input[type=text] ,input[type=var],input[type=number],input[type=password]{
+    width: 100%;
+    padding: 10px 20px;
+    margin: 5px;
+    display: inline-block;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+input[type=submit]{
+    width: 100%;
+    padding: 10px 20px;
+    margin: 5px;
+    display: inline-block;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    background-color: rgb(207, 141, 189);"
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+input[type=submit]:hover{
+    background-color: #ec1097; /* Darker green background */
+   // color: #ffffff; /* Light grey text */
+    box-shadow: 0 5px 10px black; /* Add a subtle shadow */
+}
+
+
+
+label{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    color: rgb(249, 82, 82);
+    padding-top: 10px;
+}
+label1 ,label2, label3 ,label4{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    color: rgb(125, 241, 118);
+    padding-top: 10px;
+}
+opp2{
+    padding: 20px 20px;
+}
+
+.results-body{
+    background-image: url(user/pexels-andreea-ch-371539-1166644.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height:80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 252, 252);
+    h2,h3{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+}
+button{
+    border: solid rgb(206, 205, 205);
+    border-radius: 5px;
+    padding: 12px 50px;
+    background-color: rgb(255, 202, 202);   
+}
+
+.main{
+    text-align: center;
+    align-items: center;
+   justify-content: center;
+   
+}
